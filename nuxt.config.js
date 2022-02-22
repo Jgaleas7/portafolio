@@ -7,10 +7,11 @@ export default {
   */
   head: {
     titleTemplate: '%s - ' + process.env.npm_package_name,
-    title: 'Juan Galeas best web builder of Victoria' || process.env.npm_package_name ,
+    title: ' Best Victoria web Developer - Juan Galeas' || process.env.npm_package_name ,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+       { name: 'google-site-verification', content: '2nWD7jKMTgak4y08fDNmpD8Acer1xWxBaz5SbiXY__s' },
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
