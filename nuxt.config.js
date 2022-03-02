@@ -11,7 +11,8 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-       { name: 'google-site-verification', content: '2nWD7jKMTgak4y08fDNmpD8Acer1xWxBaz5SbiXY__s' },
+      { name: 'google-site-verification', content: '2nWD7jKMTgak4y08fDNmpD8Acer1xWxBaz5SbiXY__s' },
+      { name: 'msvalidate.01', content: '94A04C0AEC5C104541CF075BD640DCEA' },
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
