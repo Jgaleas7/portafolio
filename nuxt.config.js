@@ -44,7 +44,13 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/sitemap'
   ],
+  sitemap: {
+    hostname: 'http://localhost:3000',
+    lastmod: '2022-03-24',
+    // options
+  },
   /*
   ** vuetify module configuration
   ** https://github.com/nuxt-community/vuetify-module
