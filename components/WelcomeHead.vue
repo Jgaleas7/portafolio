@@ -12,6 +12,7 @@
         <v-img
           :src="require('@/assets/me.jpg')"
           height="124vh"
+          alt="Juan Galeas"
         />
       </v-col>
 
