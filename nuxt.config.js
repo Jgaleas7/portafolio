@@ -47,7 +47,7 @@ export default {
     '@nuxtjs/sitemap'
   ],
   sitemap: {
-    hostname: 'http://localhost:3000',
+    hostname: 'https://juangaleas.xyz',
     lastmod: '2022-03-24',
     // options
   },
