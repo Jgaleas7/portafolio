@@ -44,6 +44,7 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    ['@nuxtjs/robots', { Sitemap: 'https://juangaleas.xyz/sitemap.xml' }],
     '@nuxtjs/sitemap'
   ],
   sitemap: {
