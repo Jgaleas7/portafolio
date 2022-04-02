@@ -17,7 +17,7 @@ target: 'static',
       { name: 'google-site-verification', content: '2nWD7jKMTgak4y08fDNmpD8Acer1xWxBaz5SbiXY__s' },
       { name: 'msvalidate.01', content: '94A04C0AEC5C104541CF075BD640DCEA' },
       { hid: 'keywords', name: 'keywords', content: 'software engineer, web development, build my website, computer science, Juan Galeas' },
-      { hid: 'description', name: 'description', content:'Juan Galeas Software Engineer Portfolio' },
+      { hid: 'description', name: 'description', content:"Juan Galeas's Software Engineer Portfolio" },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
