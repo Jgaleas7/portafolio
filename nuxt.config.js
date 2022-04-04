@@ -67,7 +67,7 @@ target: 'static',
      // dark: false,
       themes: {
         light: {
-          primary: 'linear-gradient(135deg, #019df7, #00c9a0)',//'#BF7506',//'#D3C3BC',
+          primary: '#BF7506',//'#D3C3BC',
           accent: '#D8EBF1',
           secondary: '#BF7506', //'#BFADA5',
           info:  '#BF7506',
