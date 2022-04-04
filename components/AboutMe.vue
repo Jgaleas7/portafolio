@@ -15,9 +15,9 @@
       >
 
 
-        <base-heading class="info--text">
+       <h2 class="display-3 v-heading mb-3 font-weight-light info--text" >
           About Me
-        </base-heading>
+        </h2>
 
         <base-text class="mb-5">
           Hello, my name is Juan Galeas, I'm a Computer Science graduate with a passion for Software Development. I have over 4 years of experience building applications using various programming languages.
