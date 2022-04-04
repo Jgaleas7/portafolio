@@ -5,7 +5,8 @@
     class="overflow-hidden"
   >
     <v-row
-      class="info white--text"
+      class=" white--text"
+      color="#83807C"
       no-gutters
     >
       <v-col
@@ -43,6 +44,7 @@
           >
             <v-icon
               dark
+              color="info"
             >mdi-instagram</v-icon>
           </v-btn>
 
@@ -52,13 +54,18 @@
             href="https://github.com/Jgaleas7"
             link
             target="_blank"
+            text-color="info"
           >
-          Github
+            <v-icon
+                dark
+                color="info"
+            >mdi-github</v-icon>
           </v-btn>
 
           <v-alert
-            border="right"
-            dark
+              border="bottom"
+              colored-border
+              color="info"
           >
             Email: juangaleassantos@gmail.com
           </v-alert>
