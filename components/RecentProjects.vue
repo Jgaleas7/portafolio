@@ -15,9 +15,9 @@
           style="transform: rotate(180deg) translateX(25%)"
         />
 
-        <base-heading class="info--text">
+         <h2 class="display-3 v-heading mb-3 font-weight-light info--text" >
           Recent Project
-        </base-heading>
+        </h2>
 
         <base-text class="mb-5">
           I build a Play Out System from scratch<br>
