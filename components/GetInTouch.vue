@@ -26,9 +26,9 @@
       >
         <base-bubble-1 />
 
-        <base-heading class="mb-5">
+        <h2 class="display-3 v-heading mb-3 font-weight-light info--text" >
           Get In Touch
-        </base-heading>
+        </h2>
 
         <v-sheet
           color="transparent"
