@@ -53,7 +53,7 @@ target: 'static',
   ],
   sitemap: {
     hostname: 'https://juangaleas.xyz',
-    lastmod: '2022-03-24',
+    lastmod: '2022-04-01',
     // options
   },
   /*
@@ -66,10 +66,10 @@ target: 'static',
      // dark: false,
       themes: {
         light: {
-          primary: '#D3C3BC',
+          primary: 'linear-gradient(135deg, #019df7, #00c9a0)',//'#BF7506',//'#D3C3BC',
           accent: '#D8EBF1',
-          secondary: '#BFADA5',
-          info: '#5B5C79',
+          secondary: '#BF7506', //'#BFADA5',
+          info:  '#BF7506',
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
           success: colors.green.accent3
