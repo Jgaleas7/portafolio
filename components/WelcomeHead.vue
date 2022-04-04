@@ -6,13 +6,14 @@
   >
     <v-row no-gutters>
       <v-col
-        class="hidden-sm-and-down"
+        class="hidden-sm-and-down main-image"
         md="6"
       >
         <v-img
           :src="require('@/assets/me.jpg')"
           height="124vh"
-          alt="Juan Galeas"
+          width="15rem"
+          alt="picture of Juan Galeas, a software engineer"
         />
       </v-col>
 
@@ -31,12 +32,12 @@
         >
           <v-col
             cols="10"
-            md="6"
+            md="8"
           >
-            <base-heading>WELCOME</base-heading>
+            <base-heading >I'm Juan Galeas,</base-heading>
             <base-text>
-              My name is Juan Blas Galeas. I'm a Software Engineer 👨‍💻 with an emphasis in:
-              <li>Leadership-oriented tasks and roles</li>
+              I’m a full-stack developer based in Victoria, Canada.
+              Learn about what I’ve done and get in touch with me.
             </base-text>
 
           </v-col>
@@ -49,3 +50,12 @@
     </v-row>
   </section>
 </template>
+<style>
+
+
+
+.main-image {
+  display: flex;
+  justify-content: center;
+}
+</style>
