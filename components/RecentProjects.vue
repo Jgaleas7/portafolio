@@ -6,15 +6,16 @@
   >
     <v-row no-gutters>
       <v-col
-        class="info text-center pa-5 white--text"
+        class=" text-center pa-5"
         cols="12"
         md="6"
+
       >
         <base-bubble-2
           style="transform: rotate(180deg) translateX(25%)"
         />
 
-        <base-heading>
+        <base-heading class="info--text">
           Recent Project
         </base-heading>
 
@@ -22,43 +23,48 @@
           I build a Play Out System from scratch<br>
           list of technologies I used:<br>
           <v-chip
-            class="white--text"
+            color="#DD9C3C"
+            text-color="black"
             outlined
           >
             Nodejs
           </v-chip>
 
           <v-chip
-            class="white--text"
-            outlined
+              color="#DD9C3C"
+              text-color="black"
+              outlined
           >
             Vuejs
           </v-chip>
 
           <v-chip
-            class="white--text"
-            outlined
+              color="#DD9C3C"
+              text-color="black"
+              outlined
           >
             Vuetify
           </v-chip>
 
           <v-chip
-            class="white--text"
-            outlined
+              color="#DD9C3C"
+              text-color="black"
+              outlined
           >
             socket.io
           </v-chip>
 
           <v-chip
-            class="white--text"
-            outlined
+              color="#DD9C3C"
+              text-color="black"
+              outlined
           >
             RethinkDB
           </v-chip>
 
         </base-text>
 
-        <v-card color="secondary">
+        <v-card color="#F4DEBE">
           <v-container class="pa-2">
             <v-row>
               <v-col
@@ -86,6 +92,7 @@
         <v-img
           :src="require('@/assets/projects.jpg')"
           height="100%"
+          alt="Juan Galeas Working"
         />
       </v-col>
     </v-row>
@@ -106,3 +113,8 @@
     }),
   }
 </script>
+<style scoped>
+ .colores {
+
+ }
+</style>
