@@ -20,8 +20,7 @@
         </base-heading>
 
         <base-text class="mb-5">
-          I am a person committed to my job, I have innovative ideas. <br>
-          I like new projects and challenges that the company where I intend to work could provide.
+          Hello, my name is Juan Galeas, I'm a Computer Science graduate with a passion for Software Development. I have over 4 years of experience building applications using various programming languages.
 
         </base-text>
 
@@ -40,7 +39,7 @@
           <v-row
             v-for="(skill, i) in skills"
             :key="i"
-            style="color: #69A1BB;"
+            style="color: #211B12;"
           >
             <v-col
               class="text-uppercase"
@@ -56,7 +55,7 @@
 
             <v-progress-linear
               :value="skill.value"
-              color="info"
+              color="#211B12"
               height="8"
             />
           </v-row>
@@ -83,7 +82,7 @@
           <v-row
             v-for="(skill, i) in skills2"
             :key="i"
-            style="color: #69A1BB;"
+            style="color: #211B12;"
           >
             <v-col
               class="text-uppercase"
@@ -99,7 +98,7 @@
 
             <v-progress-linear
               :value="skill.value"
-              color="info"
+              color="#211B12"
               height="8"
             />
           </v-row>
