@@ -38,6 +38,7 @@
             <base-text>
               I’m a full-stack developer based in Victoria, Canada.
               Learn about what I’ve done and get in touch with me.
+              Let's work together.
             </base-text>
 
           </v-col>
