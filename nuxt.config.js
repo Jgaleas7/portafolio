@@ -55,7 +55,7 @@ target: 'static',
   ],
   sitemap: {
     hostname: 'https://juangaleas.xyz',
-    lastmod: '2022-04-03',
+    lastmod: '2022-04-08',
     // options
   },
   /*
