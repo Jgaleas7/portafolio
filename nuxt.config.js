@@ -45,6 +45,7 @@ target: 'static',
   */
   buildModules: [
     '@nuxtjs/vuetify',
+    '@nuxtjs/google-analytics'
   ],
   /*
   ** Nuxt.js modules
@@ -58,6 +59,12 @@ target: 'static',
     lastmod: '2022-04-08',
     // options
   },
+  
+   googleAnalytics: {
+    id: 'G-974JRZT0HG'
+  },
+
+  
   /*
   ** vuetify module configuration
   ** https://github.com/nuxt-community/vuetify-module
