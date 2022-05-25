@@ -67,7 +67,7 @@
               colored-border
               color="info"
           >
-            Email: juangaleassantos@gmail.com
+            Email: ...
           </v-alert>
 
         </v-sheet>
