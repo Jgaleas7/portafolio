@@ -9,12 +9,14 @@
         class="hidden-sm-and-down main-image"
         md="6"
       >
+       <v-list-item-avatar>
         <v-img
           :src="require('@/assets/me.jpg')"
           height="124vh"
           width="15rem"
           alt="picture of Juan Galeas, a software engineer"
         />
+          </v-list-item-avatar>
       </v-col>
 
       <v-col
