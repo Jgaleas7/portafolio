@@ -9,7 +9,7 @@
         class="hidden-sm-and-down main-image"
         md="6"
       >
-       <v-list-item-avatar>
+       <v-list-item-avatar size="80">
         <v-img
           :src="require('@/assets/me.jpg')"
           height="124vh"
