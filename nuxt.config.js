@@ -55,8 +55,8 @@ target: 'static',
     '@nuxtjs/sitemap'
   ],
   sitemap: {
-    hostname: 'https://juangaleas.xyz',
-    lastmod: '2022-04-08',
+    hostname: 'https://juangaleas.com',
+    lastmod: '2024-01-08',
     // options
   },
   
