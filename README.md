@@ -20,3 +20,20 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+## Adding Articles
+
+Articles are written in [Markdown](https://www.markdownguide.org/) files located in the `content/articles` directory.
+Each markdown file automatically becomes an article and can be accessed at `/articles/<filename>`.
+Create a new file like `my-post.md` with front matter:
+
+```markdown
+---
+title: My Post
+description: Short summary
+---
+
+Your content here.
+```
+
+Run the development server with `npm run dev` to see the new article.

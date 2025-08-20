@@ -17,6 +17,13 @@
 
     <v-spacer />
 
+    <v-btn
+      text
+      to="/articles"
+    >
+      Articles
+    </v-btn>
+
     <social-media />
 
   </v-app-bar>

@@ -52,7 +52,8 @@ target: 'static',
   */
   modules: [
     ['@nuxtjs/robots', { Sitemap: 'https://juangaleas.com/sitemap.xml' }],
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@nuxt/content'
   ],
   sitemap: {
     hostname: 'https://juangaleas.com',

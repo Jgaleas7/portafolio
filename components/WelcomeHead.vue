@@ -9,14 +9,13 @@
         class="hidden-sm-and-down main-image"
         md="6"
       >
-       
+
         <v-img
           :src="require('@/assets/me.jpg')"
-          height="124vh"
-          width="15rem"
+          class="hero-image"
           alt="picture of Juan Galeas, a software engineer"
         />
-          
+
       </v-col>
 
       <v-col
@@ -60,5 +59,11 @@
 .main-image {
   display: flex;
   justify-content: center;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  max-height: 100vh;
 }
 </style>
