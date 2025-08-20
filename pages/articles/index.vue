@@ -5,11 +5,26 @@
         v-for="article in articles"
         :key="article.slug"
         cols="12"
+
+        sm="6"
+        md="4"
+      >
+        <v-card
+          nuxt
+          :to="`/articles/${article.slug}`"
+          class="ma-2"
+          outlined
+        >
+          <v-card-title>{{ article.title }}</v-card-title>
+          <v-card-text>{{ article.description }}</v-card-text>
+        </v-card>
+
       >
         <nuxt-link :to="`/articles/${article.slug}`">
           <h2>{{ article.title }}</h2>
         </nuxt-link>
         <p>{{ article.description }}</p>
+        main
       </v-col>
     </v-row>
   </v-container>
