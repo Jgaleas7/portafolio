@@ -19,12 +19,7 @@
           <v-card-text>{{ article.description }}</v-card-text>
         </v-card>
 
-      >
-        <nuxt-link :to="`/articles/${article.slug}`">
-          <h2>{{ article.title }}</h2>
-        </nuxt-link>
-        <p>{{ article.description }}</p>
-        main
+     
       </v-col>
     </v-row>
   </v-container>
