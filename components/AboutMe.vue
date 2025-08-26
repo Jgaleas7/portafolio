@@ -20,7 +20,7 @@
         </h2>
 
         <base-text class="mb-5">
-          Hello, my name is Juan Galeas, I'm a Computer Science graduate with a passion for Software Development. I have over 4 years of experience building applications using various programming languages.
+          Hello, my name is Juan Galeas, I'm a Computer Science graduate with a passion for Software Development. I have over 8 years of experience building applications using various programming languages.
 
         </base-text>
 
