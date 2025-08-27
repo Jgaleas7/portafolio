@@ -18,6 +18,7 @@
     <v-spacer />
 
     <v-btn
+      class="ma-2"
       color="info"
       text
       to="/articles"
