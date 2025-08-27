@@ -15,6 +15,7 @@
           :src="require('@/assets/me.jpg')"
           class="hero-image"
           alt="picture of Juan Galeas, a software engineer"
+          contain
         />
 
       </v-col>
