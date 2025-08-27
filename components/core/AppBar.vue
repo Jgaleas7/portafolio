@@ -18,6 +18,7 @@
     <v-spacer />
 
     <v-btn
+      color="info"
       text
       to="/articles"
     >
