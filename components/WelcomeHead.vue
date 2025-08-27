@@ -6,7 +6,8 @@
   >
     <v-row no-gutters>
       <v-col
-        class="hidden-sm-and-down main-image"
+        class="main-image"
+        cols="12"
         md="6"
       >
 
