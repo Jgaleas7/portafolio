@@ -1,6 +1,6 @@
 ---
 title: Watt 3 vs PM2: Are They the Same Thing?
-description: Are Watt 3 and PM2 the same thing We break down the key differences between Platformatics new runtime environment and the established Node.js process manager.
+description: Confused about Watt 3? Learn how this new Node.js runtime differs from PM2, focusing on native multithreading, internal process management, and developer experience versus external tooling.
 ---
 
 ## ⚙️ *Watt 3 vs PM2: Are They the Same Thing?*
