@@ -25,6 +25,7 @@ A process manager like PM2 watches your app and restarts it when it fails.
 
 
 > pm2 start app.js --name "my-app"
+
 Now if app.js crashes, PM2 automatically spawns a new process.
 
 It can also:
