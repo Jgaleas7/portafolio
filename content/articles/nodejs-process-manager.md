@@ -17,6 +17,7 @@ import fs from "fs";
 
 const file = fs.readFileSync("config.json"); // ❌ if file missing → crash
 console.log("Server running...");
+```
 If config.json isn’t found, your app exits with an uncaught exception. No one restarts it automatically. That means downtime — users get 502 errors, your API disappears, and your reliability score drops.
 
 What a Process Manager Does
