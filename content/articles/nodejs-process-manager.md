@@ -18,10 +18,10 @@ import fs from "fs";
 const file = fs.readFileSync("config.json"); // ❌ if file missing → crash
 console.log("Server running...");
 ```
-If config.json isn’t found, your app exits with an uncaught exception. No one restarts it automatically. That means downtime — users get 502 errors, your API disappears, and your reliability score drops.
+If config.json isn’t found, your app exits with an uncaught exception. No one restarts it automatically. That means **downtime** — users get 502 errors, your API disappears, and your reliability score drops.
 
 ## What a Process Manager Does
-A process manager like PM2 watches your app and restarts it when it fails.
+A process manager like **PM2** watches your app and restarts it when it fails.
 
 
 > pm2 start app.js --name "my-app"
@@ -43,4 +43,4 @@ Essentially, it’s a **self-healing layer** for your Node.js runtime.
 # Why It Matters
 Modern web apps are 24/7 services, not terminal scripts. A process manager guarantees **uptime, consistency, and observability** — three pillars of any production system.
 
-> The lesson: Never deploy Node without supervision.
+> **The lesson: Never deploy Node without supervision.**
