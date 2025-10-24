@@ -1,6 +1,6 @@
 ---
 title: Watt 3 vs PM2: Are They the Same Thing?
-description: "A comparison between Platformatic Watt 3 and PM2, detailing process supervision, multithreading, and developer experience."
+description: Holaw
 ---
 
 ## ⚙️ *Watt 3 vs PM2: Are They the Same Thing?*
