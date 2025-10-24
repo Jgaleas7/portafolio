@@ -1,6 +1,6 @@
 ---
 title: Watt 3 vs PM2: Are They the Same Thing?
-description: Confused about Watt 3? Learn how this new Node.js runtime differs from PM2, focusing on native multithreading, internal process management, and developer experience versus external tooling.
+description: "Confused about Watt 3? Learn how this new Node.js runtime differs from PM2, focusing on native multithreading, internal process management, and developer experience versus external tooling."
 ---
 
 ## ⚙️ *Watt 3 vs PM2: Are They the Same Thing?*
