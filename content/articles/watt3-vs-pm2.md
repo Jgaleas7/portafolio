@@ -1,7 +1,9 @@
-
+---
+title: Hello World
+description: First article2
 ---
 
-## title: ⚙️ Blog Entry 2 — *Watt 3 vs PM2: Are They the Same Thing?*
+##  ⚙️ Blog Entry 2 — *Watt 3 vs PM2: Are They the Same Thing?*
 
 ```markdown
 # Watt 3 vs PM2: Are They the Same Thing?
