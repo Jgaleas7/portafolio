@@ -23,9 +23,8 @@ If config.json isn’t found, your app exits with an uncaught exception. No one 
 What a Process Manager Does
 A process manager like PM2 watches your app and restarts it when it fails.
 
-Bash
 
-pm2 start app.js --name "my-app"
+> pm2 start app.js --name "my-app"
 Now if app.js crashes, PM2 automatically spawns a new process.
 
 It can also:
