@@ -5,7 +5,7 @@ description: First article2
 
 ##  ⚙️ Blog Entry 2 — *Watt 3 vs PM2: Are They the Same Thing?*
 
-```markdown
+
 # Watt 3 vs PM2: Are They the Same Thing?
 
 Recently, Platformatic introduced **Watt 3**, a new Node.js runtime that brings built-in multithreading and process management.  
