@@ -1,6 +1,6 @@
 ---
-title: Watt 3 vs PM2: Are They the Same Thing?
-description: Holaw
+title: *Watt 3 vs PM2: Are They the Same Thing?
+description: First article
 ---
 
 ## ⚙️ *Watt 3 vs PM2: Are They the Same Thing?*
