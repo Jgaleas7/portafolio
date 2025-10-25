@@ -1,6 +1,8 @@
 ---
 title: Watt 3 vs PM2
 description: Compare Platformatic Watt 3 and PM2 for Node.js process management.
+author: Juan Blas Galeas Santos
+date: 2025-10-24
 ---
 
 ##  ⚙️ *Watt 3 vs PM2: Are They the Same Thing?*
