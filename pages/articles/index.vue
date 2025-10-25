@@ -2,8 +2,8 @@
   <v-container>
     <v-row>
       <v-col
-        v-for="article in articles"
-        :key="article._path"
+        v-for="article in articleList"
+        :key="article.slug"
         cols="12"
         sm="6"
         md="4"
@@ -33,7 +33,7 @@ const modules = import.meta.glob('~/content/articles/*.md', {
 })
 
 function parseFrontMatter(raw) {
-  const match = /^---\n([\s\S]*?)\n---/.exec(raw)
+  const match = /^---\n([\s\S]*?)\n---/m.exec(raw)
   if (!match) {
     return {}
   }
@@ -46,12 +46,13 @@ function parseFrontMatter(raw) {
   }, {})
 }
 
-const articles = computed(() => {
-  return Object.entries(modules)
+const articleList = computed(() =>
+  Object.entries(modules)
     .map(([path, raw]) => {
       const meta = parseFrontMatter(raw)
       const slug = path.split('/').pop()?.replace(/\.md$/, '') || ''
       return {
+        slug,
         title: meta.title || slug,
         description: meta.description || '',
         date: meta.date || '',
@@ -63,5 +64,10 @@ const articles = computed(() => {
       const dateB = b.date ? new Date(b.date).getTime() : 0
       return dateB - dateA
     })
+)
+
+useSeoMeta({
+  title: 'Articles',
+  description: 'Read the latest writing from Juan Galeas.',
 })
 </script>
