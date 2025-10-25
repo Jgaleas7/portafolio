@@ -8,7 +8,7 @@
     <v-slide-x-transition>
       <v-img
         v-if="showLogo"
-        :src="require('@/assets/logo.png')"
+        :src="logoSrc"
         class="shrink"
         contain
         height="50"
@@ -32,24 +32,28 @@
 </template>
 
 <script>
-  export default {
-    name: 'CoreAppBar',
+import logoSrc from '@/assets/logo.png'
+import SocialMedia from '@/components/SocialMedia.vue'
 
-    components: {
-      SocialMedia: () => import('@/components/SocialMedia'),
+export default {
+  name: 'CoreAppBar',
+
+  components: {
+    SocialMedia,
+  },
+
+  data: () => ({
+    showLogo: false,
+    isScrolling: false,
+    logoSrc,
+  }),
+
+  methods: {
+    onScroll () {
+      const offset = window.pageYOffset
+      this.isScrolling = offset > 50
+      this.showLogo = offset > 200
     },
-
-    data: () => ({
-      showLogo: false,
-      isScrolling: false,
-    }),
-
-    methods: {
-      onScroll () {
-        const offset = window.pageYOffset
-        this.isScrolling = offset > 50
-        this.showLogo = offset > 200
-      },
-    },
-  }
+  },
+}
 </script>

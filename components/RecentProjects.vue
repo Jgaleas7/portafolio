@@ -75,7 +75,7 @@
               >
                 <a href="#">
                   <v-img
-                    :src="require(`@/assets/${project}.jpg`)"
+                    :src="project"
                     max-height="300"
                   />
                 </a>
@@ -90,7 +90,7 @@
         md="6"
       >
         <v-img
-          :src="require('@/assets/projects.jpg')"
+          :src="projectsImage"
           height="100%"
           alt="Juan Galeas Working"
         />
@@ -100,18 +100,25 @@
 </template>
 
 <script>
-  export default {
-    name: 'RecentProjects',
+import project11Image from '@/assets/project11.jpg'
+import project22Image from '@/assets/project22.jpg'
+import project33Image from '@/assets/project33.jpg'
+import project44Image from '@/assets/project44.jpg'
+import projectsImage from '@/assets/projects.jpg'
 
-    data: () => ({
-      projects: [
-        'project11',
-        'project22',
-        'project33',
-        'project44',
-      ],
-    }),
-  }
+export default {
+  name: 'RecentProjects',
+
+  data: () => ({
+    projects: [
+      project11Image,
+      project22Image,
+      project33Image,
+      project44Image,
+    ],
+    projectsImage,
+  }),
+}
 </script>
 <style scoped>
  .colores {
