@@ -5,10 +5,10 @@
   "author": "Juan Galeas",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "generate": "nuxi generate",
+    "start": "nuxi preview"
   },
   "dependencies": {
     "@nuxt/content": "^3.7.1",
