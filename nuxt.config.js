@@ -90,12 +90,29 @@ dir: {
   gtag: {
     id: 'G-974JRZT0HG'
   },
-  commonjsOptions: {
+vite: {
+    define: {
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+    },
+    // The following config helps address the TTY error in some non-interactive environments
+    build: {
+      rollupOptions: {
+        external: ['tty']
+      }
+    },
+    // NEW: Add commonjsOptions to tell Vite/Rollup how to handle older CommonJS dependencies
+    // This often forces them to be correctly converted to ES Modules (import/export) for the browser.
+    optimizeDeps: {
+      include: ['@nuxtjs/robots', '@nuxt/content'] // Explicitly include modules that might contain CJS
+    },
+    // The CJS transform option is typically for dev, but sometimes useful in build settings too
+    commonjsOptions: {
       // Tries to transform CommonJS modules into ES Modules for the browser
       transformMixedEsModules: true, 
       // If a specific package is causing the issue, we can list it here to force inclusion/processing
       include: /node_modules/ 
-    },
+    }
+  },
   /*
   ** vuetify module configuration for Nuxt 3
   ** This is completely different from Nuxt 2
