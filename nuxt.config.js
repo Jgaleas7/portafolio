@@ -90,7 +90,12 @@ dir: {
   gtag: {
     id: 'G-974JRZT0HG'
   },
-
+  commonjsOptions: {
+      // Tries to transform CommonJS modules into ES Modules for the browser
+      transformMixedEsModules: true, 
+      // If a specific package is causing the issue, we can list it here to force inclusion/processing
+      include: /node_modules/ 
+    }
   /*
   ** vuetify module configuration for Nuxt 3
   ** This is completely different from Nuxt 2
