@@ -66,7 +66,9 @@ dir: {
     '@nuxtjs/sitemap',
     '@nuxt/content'
   ],
-
+  nitro: {
+    preset: 'netlify-static'
+  },
   /*
   ** Module configurations
   */
