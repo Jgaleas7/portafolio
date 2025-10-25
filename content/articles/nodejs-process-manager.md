@@ -45,4 +45,4 @@ Essentially, it’s a **self-healing layer** for your Node.js runtime.
 # Why It Matters
 Modern web apps are 24/7 services, not terminal scripts. A process manager guarantees **uptime, consistency, and observability** — three pillars of any production system.
 
-> **The lesson: Never deploy Node without supervision.**
+> The lesson: Never deploy Node without supervision.
