@@ -67,7 +67,10 @@ dir: {
     '@nuxt/content'
   ],
   nitro: {
-    preset: 'netlify-static'
+    preset: 'netlify-static',
+    prerender: {
+      routes: articleRoutes,
+    },
   },
   /*
   ** Module configurations
@@ -112,20 +115,22 @@ vite: {
     styles: {
       configFile: '~/assets/variables.scss'
     },
-    // Theme configuration for Vuetify 3
-    theme: {
-      themes: {
-        light: {
-          dark: false, // Explicitly set dark mode to false
-          colors: { // Note the nested 'colors' object
-            primary: '#BF7506',
-            accent: '#D8EBF1',
-            secondary: '#BF7506',
-            info: '#BF7506',
-            // You must provide the direct hex codes now
-            warning: '#FFC107', // This was colors.amber.base
-            error: '#DD2C00',   // This was colors.deepOrange.accent4
-            success: '#00E676'  // This was colors.green.accent3
+    vuetifyOptions: {
+      theme: {
+        defaultTheme: 'light',
+        themes: {
+          light: {
+            dark: false, // Explicitly set dark mode to false
+            colors: { // Note the nested 'colors' object
+              primary: '#BF7506',
+              accent: '#D8EBF1',
+              secondary: '#BF7506',
+              info: '#BF7506',
+              // You must provide the direct hex codes now
+              warning: '#FFC107', // This was colors.amber.base
+              error: '#DD2C00',   // This was colors.deepOrange.accent4
+              success: '#00E676'  // This was colors.green.accent3
+            }
           }
         }
       }
