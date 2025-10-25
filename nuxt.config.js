@@ -59,7 +59,7 @@ export default defineNuxtConfig({
     'vuetify-nuxt-module',
 
     // These modules are likely the same or have Nuxt 3-compatible versions
-    '@nuxtjs/gtag',
+   'nuxt-gtag',
     ['@nuxtjs/robots', { Sitemap: 'https://juangaleas.com/sitemap.xml' }],
     '@nuxtjs/sitemap',
     '@nuxt/content'
