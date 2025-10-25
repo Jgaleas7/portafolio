@@ -13,7 +13,7 @@
         md="6"
       >
         <v-img
-          :src="require('@/assets/services.png')"
+          :src="servicesImage"
           height="100%"
         />
       </v-col>
@@ -76,32 +76,35 @@
 </template>
 
 <script>
-  export default {
-    name: 'Services',
+import servicesImage from '@/assets/services.png'
 
-    data: () => ({
-      services: [
-        {
-          name: 'Research',
-          icon: 'mdi-clipboard-text-outline',
-          blurb: 'Curabitur et nisi semper,<br> pellent e sque ',
-        },
-        {
-          name: 'Design',
-          icon: 'mdi-pencil-outline',
-          blurb: 'Curabitur et nisi semper, <br>pellent.',
-        },
-        {
-          name: 'Development',
-          icon: 'mdi-settings-outline',
-          blurb: 'Curabitur et nisi semper, <br>pellent.',
-        },
-        {
-          name: 'Support',
-          icon: 'mdi-account',
-          blurb: 'Curabitur et nisi semper, <br>pellent.',
-        },
-      ],
-    }),
-  }
+export default {
+  name: 'Services',
+
+  data: () => ({
+    services: [
+      {
+        name: 'Research',
+        icon: 'mdi-clipboard-text-outline',
+        blurb: 'Curabitur et nisi semper,<br> pellent e sque ',
+      },
+      {
+        name: 'Design',
+        icon: 'mdi-pencil-outline',
+        blurb: 'Curabitur et nisi semper, <br>pellent.',
+      },
+      {
+        name: 'Development',
+        icon: 'mdi-settings-outline',
+        blurb: 'Curabitur et nisi semper, <br>pellent.',
+      },
+      {
+        name: 'Support',
+        icon: 'mdi-account',
+        blurb: 'Curabitur et nisi semper, <br>pellent.',
+      },
+    ],
+    servicesImage,
+  }),
+}
 </script>
