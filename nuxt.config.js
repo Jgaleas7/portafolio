@@ -7,7 +7,9 @@ export default defineNuxtConfig({
   // 'target' is no longer used.
   // For a static site, you just run `npx nuxi generate`.
   // If you want a client-side-only SPA, you'd add: ssr: false
-
+dir: {
+    public: 'static'
+  },
   // 'head' is now nested inside 'app'
   app: {
     head: {
