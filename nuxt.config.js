@@ -1,5 +1,18 @@
 // Note: This is now nuxt.config.ts
-import { defineNuxtConfig } from 'nuxt';
+import { defineNuxtConfig } from 'nuxt/config';
+import { readdirSync } from 'node:fs'
+import { join } from 'node:path'
+
+const articleRoutesDir = join(process.cwd(), 'content/articles')
+const articleRoutes = (() => {
+  try {
+    return readdirSync(articleRoutesDir)
+      .filter((file) => file.endsWith('.md'))
+      .map((file) => `/articles/${file.replace(/\.md$/, '')}`)
+  } catch (error) {
+    return []
+  }
+})()
 
 // This import is no longer needed with Vuetify 3
 // import colors from 'vuetify/es5/util/colors'
@@ -50,7 +63,7 @@ dir: {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    // Your plugins
+    '~/plugins/base',
   ],
 
   /*
@@ -63,26 +76,18 @@ dir: {
 
     // These modules are likely the same or have Nuxt 3-compatible versions
    'nuxt-gtag',
-    '@nuxtjs/robots',
     '@nuxtjs/sitemap',
     '@nuxt/content'
   ],
   nitro: {
-    preset: 'netlify-static'
+    preset: 'netlify-static',
+    prerender: {
+      routes: articleRoutes,
+    },
   },
   /*
   ** Module configurations
   */
-  robots: {
-    // 
-    // --- RECOMMENDED CONFIGURATION ---
-    // 
-    
-    // a. Define your sitemap locations. The robots.txt will automatically include these.
-    // If you are using @nuxtjs/sitemap, the module usually detects it, but it's good practice to list it.
-    sitemap: [
-      '/sitemap.xml'
-    ]},
   sitemap: {
     hostname: 'https://juangaleas.com',
     lastmod: '2025-08-08',
@@ -104,7 +109,7 @@ vite: {
     // NEW: Add commonjsOptions to tell Vite/Rollup how to handle older CommonJS dependencies
     // This often forces them to be correctly converted to ES Modules (import/export) for the browser.
     optimizeDeps: {
-      include: ['@nuxtjs/robots', '@nuxt/content'] // Explicitly include modules that might contain CJS
+      include: ['@nuxt/content'] // Explicitly include modules that might contain CJS
     },
     // The CJS transform option is typically for dev, but sometimes useful in build settings too
     commonjsOptions: {
@@ -123,20 +128,22 @@ vite: {
     styles: {
       configFile: '~/assets/variables.scss'
     },
-    // Theme configuration for Vuetify 3
-    theme: {
-      themes: {
-        light: {
-          dark: false, // Explicitly set dark mode to false
-          colors: { // Note the nested 'colors' object
-            primary: '#BF7506',
-            accent: '#D8EBF1',
-            secondary: '#BF7506',
-            info: '#BF7506',
-            // You must provide the direct hex codes now
-            warning: '#FFC107', // This was colors.amber.base
-            error: '#DD2C00',   // This was colors.deepOrange.accent4
-            success: '#00E676'  // This was colors.green.accent3
+    vuetifyOptions: {
+      theme: {
+        defaultTheme: 'light',
+        themes: {
+          light: {
+            dark: false, // Explicitly set dark mode to false
+            colors: { // Note the nested 'colors' object
+              primary: '#BF7506',
+              accent: '#D8EBF1',
+              secondary: '#BF7506',
+              info: '#BF7506',
+              // You must provide the direct hex codes now
+              warning: '#FFC107', // This was colors.amber.base
+              error: '#DD2C00',   // This was colors.deepOrange.accent4
+              success: '#00E676'  // This was colors.green.accent3
+            }
           }
         }
       }

@@ -8,11 +8,13 @@
 </template>
 
 <script>
-  export default {
-    name: 'CoreFooter',
+import SocialMedia from '@/components/SocialMedia.vue'
 
-    components: {
-      SocialMedia: () => import('@/components/SocialMedia'),
-    },
-  }
+export default {
+  name: 'CoreFooter',
+
+  components: {
+    SocialMedia,
+  },
+}
 </script>

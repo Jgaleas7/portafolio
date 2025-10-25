@@ -9,13 +9,17 @@
 </template>
 
 <script>
+import CoreAppBar from '@/components/core/AppBar.vue'
+import CoreFooter from '@/components/core/Footer.vue'
+import CoreView from '@/components/core/View.vue'
+
 export default {
   name: 'App',
 
   components: {
-    CoreAppBar: () => import('@/components/core/AppBar'),
-    CoreFooter: () => import('@/components/core/Footer'),
-    CoreView: () => import('@/components/core/View'),
+    CoreAppBar,
+    CoreFooter,
+    CoreView,
   },
 }
 </script>
