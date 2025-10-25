@@ -33,12 +33,13 @@
 
 <script>
 import logoSrc from '@/assets/logo.png'
+import SocialMedia from '@/components/SocialMedia.vue'
 
 export default {
   name: 'CoreAppBar',
 
   components: {
-    SocialMedia: () => import('@/components/SocialMedia'),
+    SocialMedia,
   },
 
   data: () => ({

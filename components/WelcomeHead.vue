@@ -57,7 +57,13 @@
   </section>
 </template>
 <script setup>
+import { computed } from 'vue'
+import { useDisplay } from 'vuetify'
+
 import heroImage from '@/assets/me.jpg'
+
+const { smAndDown } = useDisplay()
+const isSmAndDown = computed(() => smAndDown.value)
 </script>
 <style>
 
