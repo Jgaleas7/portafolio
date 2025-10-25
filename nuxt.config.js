@@ -73,7 +73,7 @@ export default defineNuxtConfig({
     lastmod: '2025-08-08',
   },
 
-  googleAnalytics: {
+  gtag: {
     id: 'G-974JRZT0HG'
   },
 
