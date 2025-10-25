@@ -68,19 +68,12 @@ It’s like having built-in multithreading inside Node, without PM2’s external
 
 
 | Feature | PM2 | Watt 3 |
-
-| -------- | ------- | -------- |
-
+| :--- | :--- | :--- |
 | Process supervision | ✅ External | ✅ Internal |
-
 | Multithreading | ⚙️ via cluster mode | 🧠 Native threading |
-
 | CLI / monitoring tools | ✅ Yes | ⚠️ Limited |
-
 | OS-level daemon | ✅ Yes | ❌ No |
-
 | Restart on crash | ✅ | ✅ |
-
 | Maturity | ⭐ Established | 🚀 Emerging |
 
 
