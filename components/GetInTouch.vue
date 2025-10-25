@@ -14,7 +14,7 @@
         md="6"
       >
         <v-img
-          :src="require('@/assets/contact.png')"
+          :src="contactImage"
           height="100%"
         />
       </v-col>
@@ -77,7 +77,12 @@
 </template>
 
 <script>
-  export default {
-    name: 'GetInTouch',
-  }
+import contactImage from '@/assets/contact.png'
+
+export default {
+  name: 'GetInTouch',
+  data: () => ({
+    contactImage,
+  }),
+}
 </script>

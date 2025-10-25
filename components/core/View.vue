@@ -11,15 +11,21 @@
 </template>
 
 <script>
-  export default {
-    name: 'CoreView',
+import AboutMe from '@/components/AboutMe.vue'
+import GetInTouch from '@/components/GetInTouch.vue'
+import RecentProjects from '@/components/RecentProjects.vue'
+import Services from '@/components/Services.vue'
+import WelcomeHead from '@/components/WelcomeHead.vue'
 
-    components: {
-      AboutMe: () => import('@/components/AboutMe'),
-      GetInTouch: () => import('@/components/GetInTouch'),
-      RecentProjects: () => import('@/components/RecentProjects'),
-      Services: () => import('@/components/Services'),
-      Welcome: () => import('@/components/WelcomeHead'),
-    },
-  }
+export default {
+  name: 'CoreView',
+
+  components: {
+    AboutMe,
+    GetInTouch,
+    RecentProjects,
+    Services,
+    Welcome: WelcomeHead,
+  },
+}
 </script>

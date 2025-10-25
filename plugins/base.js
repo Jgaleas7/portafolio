@@ -1,14 +1,15 @@
-import Vue from 'vue'
-import BaseBtn from '@/components/base/Btn'
-import BaseHeading from '@/components/base/Heading'
-import BaseSubheading from '@/components/base/Subheading'
-import BaseText from '@/components/base/Text'
-import BaseBubble1 from '@/components/base/Bubble1'
-import BaseBubble2 from '@/components/base/Bubble2'
+import BaseBtn from '@/components/base/Btn.vue'
+import BaseHeading from '@/components/base/Heading.vue'
+import BaseSubheading from '@/components/base/Subheading.vue'
+import BaseText from '@/components/base/Text.vue'
+import BaseBubble1 from '@/components/base/Bubble1.vue'
+import BaseBubble2 from '@/components/base/Bubble2.vue'
 
-Vue.component('BaseBtn', BaseBtn)
-Vue.component('BaseHeading', BaseHeading)
-Vue.component('BaseSubheading', BaseSubheading)
-Vue.component('BaseText', BaseText)
-Vue.component('BaseBubble1', BaseBubble1)
-Vue.component('BaseBubble2', BaseBubble2)
+export default defineNuxtPlugin((nuxtApp) => {
+  nuxtApp.vueApp.component('BaseBtn', BaseBtn)
+  nuxtApp.vueApp.component('BaseHeading', BaseHeading)
+  nuxtApp.vueApp.component('BaseSubheading', BaseSubheading)
+  nuxtApp.vueApp.component('BaseText', BaseText)
+  nuxtApp.vueApp.component('BaseBubble1', BaseBubble1)
+  nuxtApp.vueApp.component('BaseBubble2', BaseBubble2)
+})

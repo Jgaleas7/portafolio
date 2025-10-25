@@ -12,7 +12,7 @@
       >
 
         <v-img
-          :src="require('@/assets/me.jpg')"
+          :src="heroImage"
           class="hero-image"
           alt="picture of Juan Galeas, a software engineer"
           contain
@@ -21,10 +21,12 @@
       </v-col>
 
       <v-col
-        class="align-content-space-between layout wrap"
+        :class="[
+          'align-content-space-between layout wrap',
+          { 'pa-5': isSmAndDown },
+        ]"
         cols="12"
         md="6"
-        :pa-5="$vuetify.breakpoint.smAndDown"
       >
         <base-bubble-1
           style="transform: rotate(180deg) translateY(25%)"
@@ -54,6 +56,15 @@
     </v-row>
   </section>
 </template>
+<script setup>
+import { computed } from 'vue'
+import { useDisplay } from 'vuetify'
+
+import heroImage from '@/assets/me.jpg'
+
+const { smAndDown } = useDisplay()
+const isSmAndDown = computed(() => smAndDown.value)
+</script>
 <style>
 
 

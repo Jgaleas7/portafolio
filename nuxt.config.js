@@ -1,5 +1,5 @@
 // Note: This is now nuxt.config.ts
-import { defineNuxtConfig } from 'nuxt';
+import { defineNuxtConfig } from 'nuxt/config';
 
 // This import is no longer needed with Vuetify 3
 // import colors from 'vuetify/es5/util/colors'
@@ -50,7 +50,7 @@ dir: {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    // Your plugins
+    '~/plugins/base',
   ],
 
   /*
@@ -63,7 +63,6 @@ dir: {
 
     // These modules are likely the same or have Nuxt 3-compatible versions
    'nuxt-gtag',
-    '@nuxtjs/robots',
     '@nuxtjs/sitemap',
     '@nuxt/content'
   ],
@@ -73,16 +72,6 @@ dir: {
   /*
   ** Module configurations
   */
-  robots: {
-    // 
-    // --- RECOMMENDED CONFIGURATION ---
-    // 
-    
-    // a. Define your sitemap locations. The robots.txt will automatically include these.
-    // If you are using @nuxtjs/sitemap, the module usually detects it, but it's good practice to list it.
-    sitemap: [
-      '/sitemap.xml'
-    ]},
   sitemap: {
     hostname: 'https://juangaleas.com',
     lastmod: '2025-08-08',
@@ -104,7 +93,7 @@ vite: {
     // NEW: Add commonjsOptions to tell Vite/Rollup how to handle older CommonJS dependencies
     // This often forces them to be correctly converted to ES Modules (import/export) for the browser.
     optimizeDeps: {
-      include: ['@nuxtjs/robots', '@nuxt/content'] // Explicitly include modules that might contain CJS
+      include: ['@nuxt/content'] // Explicitly include modules that might contain CJS
     },
     // The CJS transform option is typically for dev, but sometimes useful in build settings too
     commonjsOptions: {
