@@ -1,100 +1,112 @@
-import colors from 'vuetify/es5/util/colors'
+// Note: This is now nuxt.config.ts
+
+// This import is no longer needed with Vuetify 3
+// import colors from 'vuetify/es5/util/colors'
 
 export default defineNuxtConfig({
-target: 'static',
-  /*
-  ** Headers of the page
-  */
-  head: {
-    htmlAttrs: {
-      lang: 'en'
-    },
-    titleTemplate: '%s - ' + process.env.npm_package_name,
-    title: ' Best Victoria web Developer - Juan Galeas' || process.env.npm_package_name ,
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { name: 'google-site-verification', content: '2nWD7jKMTgak4y08fDNmpD8Acer1xWxBaz5SbiXY__s' },
-      { name: 'msvalidate.01', content: '94A04C0AEC5C104541CF075BD640DCEA' },
-      { hid: 'keywords', name: 'keywords', content: 'software engineer, web development, build my website, computer science, Juan Galeas' },
-      { hid: 'description', name: 'description', content:"Juan Galeas's Software Engineer Portfolio" },
-      { name:'theme-color', content:'#DD9C3C'},
-      { name:'author', content:'Juan Galeas'}
-    ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+  // 'target' is no longer used.
+  // For a static site, you just run `npx nuxi generate`.
+  // If you want a client-side-only SPA, you'd add: ssr: false
+
+  // 'head' is now nested inside 'app'
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'en'
+      },
+      title: 'Best Victoria web Developer - Juan Galeas',
+      titleTemplate: '%s - Juan Galeas', // Simplified this a bit
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { name: 'google-site-verification', content: '2nWD7jKMTgak4y08fDNmpD8Acer1xWxBaz5SbiXY__s' },
+        { name: 'msvalidate.01', content: '94A04C0AEC5C104541CF075BD640DCEA' },
+        { hid: 'keywords', name: 'keywords', content: 'software engineer, web development, build my website, computer science, Juan Galeas' },
+        { hid: 'description', name: 'description', content: "Juan Galeas's Software Engineer Portfolio" },
+        { name: 'theme-color', content: '#DD9C3C' },
+        { name: 'author', content: 'Juan Galeas' }
+      ],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      ]
+    }
   },
-  components: true,
-  /*
-  ** Customize the progress-bar color
-  */
-  loading: { color: '#fff' },
+
+  // 'components: true' is now the default, so it can be removed.
+  // 'loading' progress bar is also handled differently, often with a
+  // custom component like <NuxtLoadingIndicator>
+
   /*
   ** Global CSS
   */
   css: [
+    // Your global CSS files
   ],
+
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
+    // Your plugins
   ],
+
   /*
-  ** Nuxt.js dev-modules
-  */
-  buildModules: [
-    '@nuxtjs/vuetify',
-    '@nuxtjs/google-analytics'
-  ],
-  /*
-  ** Nuxt.js modules
+  ** 'buildModules' and 'modules' are now merged into just 'modules'
   */
   modules: [
+    // THIS IS THE BIGGEST CHANGE
+    // You need to install 'vuetify-nuxt-module' for Nuxt 3
+    'vuetify-nuxt-module',
+
+    // These modules are likely the same or have Nuxt 3-compatible versions
+    '@nuxtjs/google-analytics',
     ['@nuxtjs/robots', { Sitemap: 'https://juangaleas.com/sitemap.xml' }],
     '@nuxtjs/sitemap',
     '@nuxt/content'
   ],
+
+  /*
+  ** Module configurations
+  */
   sitemap: {
     hostname: 'https://juangaleas.com',
     lastmod: '2025-08-08',
-    // options
   },
-  
-   googleAnalytics: {
+
+  googleAnalytics: {
     id: 'G-974JRZT0HG'
   },
 
-  
   /*
-  ** vuetify module configuration
-  ** https://github.com/nuxt-community/vuetify-module
+  ** vuetify module configuration for Nuxt 3
+  ** This is completely different from Nuxt 2
   */
   vuetify: {
-    customVariables: ['~/assets/variables.scss'],
+    // This replaces the old 'customVariables'
+    styles: {
+      configFile: '~/assets/variables.scss'
+    },
+    // Theme configuration for Vuetify 3
     theme: {
-     // dark: false,
       themes: {
         light: {
-          primary: '#BF7506',//'#D3C3BC',
-          accent: '#D8EBF1',
-          secondary: '#BF7506', //'#BFADA5',
-          info:  '#BF7506',
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3
+          dark: false, // Explicitly set dark mode to false
+          colors: { // Note the nested 'colors' object
+            primary: '#BF7506',
+            accent: '#D8EBF1',
+            secondary: '#BF7506',
+            info: '#BF7506',
+            // You must provide the direct hex codes now
+            warning: '#FFC107', // This was colors.amber.base
+            error: '#DD2C00',   // This was colors.deepOrange.accent4
+            success: '#00E676'  // This was colors.green.accent3
+          }
         }
       }
     }
   },
-  /*
-  ** Build configuration
-  */
-  build: {
-    /*
-    ** You can extend webpack config here
-    */
-    extend (config, ctx) {
-    }
-  }
+
+  // 'build' is no longer used for webpack extensions in this way.
+  // You would use 'vite: { ... }' or 'webpack: { ... }' if needed.
+  // Since yours was empty, we can just remove it.
 })
