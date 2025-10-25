@@ -69,7 +69,7 @@ It’s like having built-in multithreading inside Node, without PM2’s external
 
 | Feature | PM2 | Watt 3 |
 
-|----------|-----|--------|
+| -------- | ------- | -------- |
 
 | Process supervision | ✅ External | ✅ Internal |
 
