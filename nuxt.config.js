@@ -1,5 +1,5 @@
 // Note: This is now nuxt.config.ts
-import { defineNuxtConfig } from 'nuxt';
+import { defineNuxtConfig } from 'nuxt/config';
 
 // This import is no longer needed with Vuetify 3
 // import colors from 'vuetify/es5/util/colors'

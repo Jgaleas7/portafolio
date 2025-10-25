@@ -12,7 +12,7 @@
       >
 
         <v-img
-          :src="require('@/assets/me.jpg')"
+          :src="heroImage"
           class="hero-image"
           alt="picture of Juan Galeas, a software engineer"
           contain
@@ -54,6 +54,9 @@
     </v-row>
   </section>
 </template>
+<script setup>
+import heroImage from '@/assets/me.jpg'
+</script>
 <style>
 
 
