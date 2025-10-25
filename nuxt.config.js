@@ -1,6 +1,6 @@
 import colors from 'vuetify/es5/util/colors'
 
-export default {
+export default defineNuxtConfig({
 target: 'static',
   /*
   ** Headers of the page
@@ -97,4 +97,4 @@ target: 'static',
     extend (config, ctx) {
     }
   }
-}
+})
