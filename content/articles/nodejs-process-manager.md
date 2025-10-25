@@ -1,6 +1,8 @@
 ---
 title: Why You Should Never Run a Node.js App in Production Without a Process Manager
 description: Don't deploy Node.js with just node app.js. Learn why a process manager like PM2 is essential for guaranteeing uptime, scaling, and crash recovery in production environments.
+author: Juan Blas Galeas Santos
+date: 2025-10-24
 ---
 # Why You Should Never Run a Node.js App in Production Without a Process Manager
 
