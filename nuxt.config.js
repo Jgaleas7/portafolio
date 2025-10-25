@@ -60,7 +60,7 @@ export default defineNuxtConfig({
 
     // These modules are likely the same or have Nuxt 3-compatible versions
    'nuxt-gtag',
-    ['@nuxtjs/robots', { Sitemap: 'https://juangaleas.com/sitemap.xml' }],
+    '@nuxtjs/robots',
     '@nuxtjs/sitemap',
     '@nuxt/content'
   ],
@@ -68,6 +68,16 @@ export default defineNuxtConfig({
   /*
   ** Module configurations
   */
+  robots: {
+    // 
+    // --- RECOMMENDED CONFIGURATION ---
+    // 
+    
+    // a. Define your sitemap locations. The robots.txt will automatically include these.
+    // If you are using @nuxtjs/sitemap, the module usually detects it, but it's good practice to list it.
+    sitemap: [
+      '/sitemap.xml'
+    ]},
   sitemap: {
     hostname: 'https://juangaleas.com',
     lastmod: '2025-08-08',
